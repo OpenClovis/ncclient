@@ -224,7 +224,7 @@ class Manager(six.with_metaclass(OpExecutor, object)):
     def execute(self, cls, *args, **kwds):
         return cls(self._session,
                    device_handler=self._device_handler,
-                   async=self._async_mode,
+                   asyn=self._async_mode,
                    timeout=self._timeout,
                    raise_mode=self._raise_mode).request(*args, **kwds)
 
